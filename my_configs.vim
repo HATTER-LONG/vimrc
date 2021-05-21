@@ -21,6 +21,7 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 inoremap jj <ESC>
 inoremap qj <ESC>la
+inoremap qk <ESC>f)a
 inoremap 1n <Esc>j^i
 inoremap 1b <Esc>k^i
 
