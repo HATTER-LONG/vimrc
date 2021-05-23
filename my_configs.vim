@@ -108,8 +108,10 @@ function! s:show_documentation()
   endif
 endfunction
 
+
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
+hi CocHighlightText     ctermfg=LightMagenta    guifg=LightMagenta
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
