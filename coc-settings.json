@@ -10,5 +10,6 @@
         "--completion-style=detailed",
         "--cross-file-rename"
     ],
-    "clangd.semanticHighlighting": true
+    "clangd.semanticHighlighting": true,
+    "coc.preferences.formatOnSaveFiletypes": ["cpp", "json"]
 }
