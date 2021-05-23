@@ -27,3 +27,6 @@ inoremap 1b <Esc>k^i
 
 vnoremap p pgvy
 noremap <leader><leader>n :nohl<cr>
+
+
+let g:coc_config_home = '~/.vim_runtime/'

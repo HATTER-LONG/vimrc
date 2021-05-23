@@ -1,7 +1,9 @@
 #!/bin/sh
 set -e
 
-cd ~/.vim_runtime
+cd $HOME/.vim_runtime
+
+ln -s $HOME/.vim_runtime/temp_dirs/coc  $HOME/.config 
 
 echo 'set runtimepath+=~/.vim_runtime
 

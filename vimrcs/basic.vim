@@ -134,7 +134,6 @@ try
 catch
 endtry
 
-set background=dark
 if has("termguicolors")
     " enable true color
     set termguicolors
