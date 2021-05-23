@@ -1,3 +1,14 @@
 {
-    "json.enable": true
+    "json.enable": true,
+    "languageserver": {
+
+    },
+    "clangd.enabled": true,
+    "clangd.arguments": [
+        "--header-insertion=never",
+        "--recovery-ast",
+        "--completion-style=detailed",
+        "--cross-file-rename"
+    ],
+    "clangd.semanticHighlighting": true
 }
