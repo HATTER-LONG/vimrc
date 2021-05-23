@@ -28,8 +28,8 @@ set guioptions-=l
 set guioptions-=L
 
 " Colorscheme
-set background=dark
-colorscheme peaksea
+let g:onedark_terminal_italics = 1
+colorscheme onedark
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

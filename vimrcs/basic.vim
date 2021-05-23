@@ -135,7 +135,10 @@ catch
 endtry
 
 set background=dark
-
+if has("termguicolors")
+    " enable true color
+    set termguicolors
+endif
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
