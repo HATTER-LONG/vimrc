@@ -1,8 +1,6 @@
 {
     "json.enable": true,
-    "languageserver": {
-
-    },
+    "languageserver": {},
     "clangd.enabled": true,
     "clangd.arguments": [
         "--header-insertion=never",
@@ -11,5 +9,14 @@
         "--cross-file-rename"
     ],
     "clangd.semanticHighlighting": true,
-    "coc.preferences.formatOnSaveFiletypes": ["cpp", "json"]
+    "coc.preferences.formatOnSaveFiletypes": [
+        "cpp",
+        "hpp",
+        "cc",
+        "py",
+        "json",
+        "rs"
+    ],
+    "rust-analyzer.enable": true,
+    "rust-analyzer.server.path": "~/.cargo/bin/rust-analyzer"
 }
