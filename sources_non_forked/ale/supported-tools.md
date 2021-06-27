@@ -14,10 +14,10 @@ formatting.
 
 **Legend**
 
-|      Key      |             Definition           |
-| ------------- | -------------------------------- |
-| :floppy_disk: | May only run on files on disk    |
-|   :warning:   | Disabled by default              |
+| Key           | Definition                    |
+| ------------- | ----------------------------- |
+| :floppy_disk: | May only run on files on disk |
+| :warning:     | Disabled by default           |
 
 ---
 
@@ -192,7 +192,7 @@ formatting.
   * [golangserver](https://github.com/sourcegraph/go-langserver) :warning:
   * [golint](https://godoc.org/github.com/golang/lint)
   * [gometalinter](https://github.com/alecthomas/gometalinter) :warning: :floppy_disk:
-  * [gopls](https://github.com/golang/go/wiki/gopls) :warning:
+  * [gopls](https://github.com/golang/go/wiki/gopls)
   * [gosimple](https://github.com/dominikh/go-tools/tree/master/cmd/gosimple) :warning: :floppy_disk:
   * [gotype](https://godoc.org/golang.org/x/tools/cmd/gotype) :warning: :floppy_disk:
   * [revive](https://github.com/mgechev/revive) :warning: :floppy_disk:
@@ -577,6 +577,7 @@ formatting.
 * XML
   * [xmllint](http://xmlsoft.org/xmllint.html)
 * YAML
+  * [circleci](https://circleci.com/docs/2.0/local-cli) :floppy_disk:
   * [prettier](https://github.com/prettier/prettier)
   * [spectral](https://github.com/stoplightio/spectral)
   * [swaglint](https://github.com/byCedric/swaglint)
