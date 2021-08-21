@@ -17,6 +17,11 @@ let s:default_registry = {
 \       'suggested_filetypes': ['python'],
 \       'description': 'Fix import issues with autoimport.',
 \   },
+\   'autoflake': {
+\       'function': 'ale#fixers#autoflake#Fix',
+\       'suggested_filetypes': ['python'],
+\       'description': 'Fix flake issues with autoflake.',
+\   },
 \   'autopep8': {
 \       'function': 'ale#fixers#autopep8#Fix',
 \       'suggested_filetypes': ['python'],
@@ -316,6 +321,11 @@ let s:default_registry = {
 \       'suggested_filetypes': ['reason'],
 \       'description': 'Fix ReasonML files with refmt.',
 \   },
+\   'pandoc': {
+\       'function': 'ale#fixers#pandoc#Fix',
+\       'suggested_filetypes': ['markdown'],
+\       'description': 'Fix markdown files with pandoc.',
+\   },
 \   'shfmt': {
 \       'function': 'ale#fixers#shfmt#Fix',
 \       'suggested_filetypes': ['sh'],
@@ -370,6 +380,11 @@ let s:default_registry = {
 \       'function': 'ale#fixers#dartfmt#Fix',
 \       'suggested_filetypes': ['dart'],
 \       'description': 'Fix Dart files with dartfmt.',
+\   },
+\   'dart-format': {
+\       'function': 'ale#fixers#dart_format#Fix',
+\       'suggested_filetypes': ['dart'],
+\       'description': 'Fix Dart files with dart format.',
 \   },
 \   'xmllint': {
 \       'function': 'ale#fixers#xmllint#Fix',
@@ -436,10 +451,20 @@ let s:default_registry = {
 \       'suggested_filetypes': ['html', 'htmldjango'],
 \       'description': 'Fix HTML files with html-beautify.',
 \   },
+\   'lua-format': {
+\       'function': 'ale#fixers#lua_format#Fix',
+\       'suggested_filetypes': ['lua'],
+\       'description': 'Fix Lua files with lua-format.',
+\   },
 \   'luafmt': {
 \       'function': 'ale#fixers#luafmt#Fix',
 \       'suggested_filetypes': ['lua'],
 \       'description': 'Fix Lua files with luafmt.',
+\   },
+\   'stylua': {
+\       'function': 'ale#fixers#stylua#Fix',
+\       'suggested_filetypes': ['lua'],
+\       'description': 'Fix Lua files with stylua.',
 \   },
 \   'ormolu': {
 \       'function': 'ale#fixers#ormolu#Fix',
