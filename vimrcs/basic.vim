@@ -1,4 +1,14 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Maintainer: 
+"       Amir Salihefendic — @amix3k
+"
+" Awesome_version:
+"       Get this config, nice color schemes and lots of plugins!
+"
+"       Install the awesome version from:
+"
+"           https://github.com/amix/vimrc
+"
 " Sections:
 "    -> General
 "    -> VIM user interface
@@ -33,8 +43,8 @@ au FocusGained,BufEnter * checktime
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = " "
-"nnoremap <SPACE> <Nop>
+let mapleader = ","
+
 " Fast saving
 nmap <leader>w :w!<cr>
 
@@ -50,7 +60,7 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 set so=7
 
 " Avoid garbled characters in Chinese language windows OS
-let $LANG='en'
+let $LANG='en' 
 set langmenu=en
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
@@ -134,10 +144,8 @@ try
 catch
 endtry
 
-if has("termguicolors")
-    " enable true color
-    set termguicolors
-endif
+set background=dark
+
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
@@ -197,7 +205,7 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-"map <space> /
+map <space> /
 map <C-space> ?
 
 " Disable highlight when <leader><cr> is pressed
