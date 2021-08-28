@@ -78,11 +78,15 @@ GITHUB_ZIP_MAIN = "%s/archive/main.zip"
 
 SOURCE_DIR = path.join(path.dirname(__file__), "sources_non_forked")
 MY_SOURCE_DIR = path.join(path.dirname(__file__), "my_plugins")
+"""
+主干分支插件更新
+"""
 #default_sourcedir = SOURCE_DIR
-
 #default_upgrade = PLUGINS
+"""
+个人插件更新
+"""
 default_sourcedir = MY_SOURCE_DIR
-
 default_upgrade = MY_PLUGINS
 
 
