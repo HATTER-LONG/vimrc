@@ -64,9 +64,26 @@ editorconfig-vim https://github.com/editorconfig/editorconfig-vim
 dracula https://github.com/dracula/vim
 """.strip()
 
+MY_PLUGINS = """
+coc-nvim https://github.com/neoclide/coc.nvim
+numbers https://github.com/myusuf3/numbers.vim
+onedark https://github.com/joshdick/onedark.vim
+vim-easymotion https://github.com/easymotion/vim-easymotion
+vim-lsp-cxx-highlight https://github.com/jackguo380/vim-lsp-cxx-highlight
+vim-polyglot https://github.com/sheerun/vim-polyglot
+"""
+
 GITHUB_ZIP = "%s/archive/master.zip"
+GITHUB_ZIP_MAIN = "%s/archive/main.zip"
 
 SOURCE_DIR = path.join(path.dirname(__file__), "sources_non_forked")
+MY_SOURCE_DIR = path.join(path.dirname(__file__), "my_plugins")
+#default_sourcedir = SOURCE_DIR
+
+#default_upgrade = PLUGINS
+default_sourcedir = MY_SOURCE_DIR
+
+default_upgrade = MY_PLUGINS
 
 
 def download_extract_replace(plugin_name, zip_path, temp_dir, source_dir):
@@ -99,7 +116,17 @@ def update(plugin):
     name, github_url = plugin.split(" ")
     zip_path = GITHUB_ZIP % github_url
     try:
-        download_extract_replace(name, zip_path, temp_directory, SOURCE_DIR)
+        download_extract_replace(
+            name, zip_path, temp_directory, default_sourcedir)
+        return
+    except Exception as exp:
+        print("Could not update {} master branch. Try main branch".format(
+            name, str(exp)))
+
+    zip_path = GITHUB_ZIP_MAIN % github_url
+    try:
+        download_extract_replace(
+            name, zip_path, temp_directory, default_sourcedir)
     except Exception as exp:
         print("Could not update {}. Error was: {}".format(name, str(exp)))
 
@@ -110,8 +137,8 @@ if __name__ == "__main__":
     try:
         if futures:
             with futures.ThreadPoolExecutor(16) as executor:
-                executor.map(update, PLUGINS.splitlines())
+                executor.map(update, default_upgrade.splitlines())
         else:
-            [update(x) for x in PLUGINS.splitlines()]
+            [update(x) for x in default_upgrade.splitlines()]
     finally:
         shutil.rmtree(temp_directory)
