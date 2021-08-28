@@ -75,7 +75,7 @@ vim-polyglot https://github.com/sheerun/vim-polyglot
 
 GITHUB_ZIP = "%s/archive/master.zip"
 GITHUB_ZIP_MAIN = "%s/archive/main.zip"
-
+GITHUB_ZIP_RELEASE = "%s/archive/release.zip"
 SOURCE_DIR = path.join(path.dirname(__file__), "sources_non_forked")
 MY_SOURCE_DIR = path.join(path.dirname(__file__), "my_plugins")
 """
@@ -119,6 +119,8 @@ def download_extract_replace(plugin_name, zip_path, temp_dir, source_dir):
 def update(plugin):
     name, github_url = plugin.split(" ")
     zip_path = GITHUB_ZIP % github_url
+    if name == "coc-nvim":
+        zip_path = GITHUB_ZIP_RELEASE % github_url
     try:
         download_extract_replace(
             name, zip_path, temp_directory, default_sourcedir)
