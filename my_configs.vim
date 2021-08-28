@@ -214,3 +214,9 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""''
 let g:lsp_cxx_hl_ft_whitelist += ['hpp']
 let g:lsp_cxx_hl_light_bg = 1 
+
+
+" 支持在Visual模式下，通过C-y复制到系统剪切板
+vnoremap <C-y> "+y
+" 支持在normal模式下，通过C-p粘贴系统剪切板
+nnoremap <C-p> "+p
