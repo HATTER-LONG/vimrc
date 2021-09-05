@@ -71,6 +71,7 @@ onedark https://github.com/joshdick/onedark.vim
 vim-easymotion https://github.com/easymotion/vim-easymotion
 vim-lsp-cxx-highlight https://github.com/jackguo380/vim-lsp-cxx-highlight
 vim-polyglot https://github.com/sheerun/vim-polyglot
+edge https://github.com/sainnhe/edge
 """
 
 GITHUB_ZIP = "%s/archive/master.zip"

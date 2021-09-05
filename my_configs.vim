@@ -6,8 +6,15 @@ if has("termguicolors")
     set termguicolors
 endif
 
-let g:onedark_terminal_italics = 1
-colorscheme onedark
+"""""""""""""""""""""""
+"let g:onedark_terminal_italics = 1
+"colorscheme onedark
+"""""""""""""""""""""""
+let g:edge_style = 'aura'
+let g:edge_enable_italic = 1
+let g:edge_disable_italic_comment = 1
+colorscheme edge
+
 
 """""""""""""""""""""""
 " 光标模式设置 Mode Settings
@@ -123,7 +130,7 @@ endfunction
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
-hi CocHighlightText   cterm=underline  ctermfg=cyan    guifg=cyan
+hi CocHighlightText   cterm=underline  ctermfg=cyan    guifg=NONE
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
@@ -212,7 +219,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-lsp-cxx-highlight
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""''
-let g:lsp_cxx_hl_ft_whitelist += ['hpp']
+let g:lsp_cxx_hl_ft_whitelist += ['hpp', 'c', 'cpp', 'objc', 'objcpp', 'cc']
 let g:lsp_cxx_hl_light_bg = 1 
 
 
@@ -220,3 +227,4 @@ let g:lsp_cxx_hl_light_bg = 1
 vnoremap <C-y> "+y
 " 支持在normal模式下，通过C-p粘贴系统剪切板
 nnoremap <C-p> "+p
+
