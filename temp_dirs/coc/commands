@@ -1,2 +1,3 @@
+extensions.toggleAutoUpdate
 clangd.switchSourceHeader
 clangd.symbolInfo

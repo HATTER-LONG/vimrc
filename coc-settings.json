@@ -18,5 +18,6 @@
         "rs"
     ],
     "rust-analyzer.enable": true,
-    "rust-analyzer.server.path": "~/.cargo/bin/rust-analyzer"
+    "rust-analyzer.server.path": "~/.cargo/bin/rust-analyzer",
+    "coc.preferences.extensionUpdateCheck": "daily"
 }
