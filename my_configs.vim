@@ -35,17 +35,6 @@ let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
-""""""""""""""""""""""""
-" 编辑快捷
-""""""""""""""""""""""""
-inoremap jj <ESC>
-inoremap qj <ESC>la
-inoremap qk <ESC>f)a
-inoremap 1n <Esc>j^i
-inoremap 1b <Esc>k^i
-
-vnoremap p pgvy
-noremap <leader><leader>n :nohl<cr>
 
 """""""""""""""""""""""""""
 " COC-Nvim 扩展设置
@@ -219,20 +208,14 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-lsp-cxx-highlight
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""''
-let g:lsp_cxx_hl_ft_whitelist += ['hpp', 'c', 'cpp', 'objc', 'objcpp', 'cc']
+let g:lsp_cxx_hl_ft_whitelist = ['hpp', 'c', 'cpp', 'objc', 'objcpp', 'cc']
 let g:lsp_cxx_hl_light_bg = 1 
-
-
-" 支持在Visual模式下，通过C-y复制到系统剪切板
-vnoremap <C-y> "+y
-" 支持在normal模式下，通过C-p粘贴系统剪切板
-nnoremap <C-p> "+p
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""'
 " easymotion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_do_mapping = 1" Enable default mappings
 
 
 nmap s <Plug>(easymotion-overwin-f2)
@@ -247,12 +230,3 @@ map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
-" Gif config
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-
-" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
-" Without these mappings, `n` & `N` works fine. (These mappings just provide
-" different highlight method and have some other features )
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
