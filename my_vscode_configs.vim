@@ -22,3 +22,9 @@ nnoremap <C-v> "+p
 nnoremap <C-f> /
 vnoremap <C-f> <C-c>/<C-r>*<CR>
 nmap <C-w> :w!<cr>
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
