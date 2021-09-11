@@ -21,3 +21,4 @@ nnoremap <C-v> "+p
 
 nnoremap <C-f> /
 vnoremap <C-f> <C-c>/<C-r>*<CR>
+nmap <C-w> :w!<cr>
