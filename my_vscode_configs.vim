@@ -3,7 +3,7 @@
 """"""""""""""""""""""""
 inoremap jj <ESC>
 inoremap qj <ESC>la
-inoremap qk <ESC>f)a
+inoremap qk <ESC>$a
 inoremap 1n <Esc>j^i
 inoremap 1b <Esc>k^i
 
@@ -21,7 +21,6 @@ nnoremap <C-v> "+p
 
 nnoremap <C-f> /
 vnoremap <C-f> <C-c>/<C-r>*<CR>
-nmap <C-w> :w!<cr>
 
 " Smart way to move between windows
 map <C-j> <C-W>j

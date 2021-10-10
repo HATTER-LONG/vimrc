@@ -5,5 +5,12 @@
   ],
   "L2hvbWUvbGF5dG9uL1dvcmtTcGFjZS9BVVRlc3RUb29scw==": [
     "sou"
+  ],
+  "L2hvbWUvbGF5dG9uL1dvcmtTcGFjZS9DcHBIdHRwU2VydmVy": [
+    "namespac",
+    "main"
+  ],
+  "L2hvbWUvbGF5dG9uL1dvcmtTcGFjZS9aTFRvb2xLaXQ=": [
+    "socket::send"
   ]
 }
