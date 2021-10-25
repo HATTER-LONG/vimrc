@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Aug  6 11:26:58 AM UTC 2021'
+let s:last_modified = 'Tue Oct 12 11:57:21 UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -126,6 +126,26 @@ call edge#highlight('debugBreakpoint', s:palette.bg0, s:palette.bg_red)
 call edge#highlight('ToolbarButton', s:palette.bg0, s:palette.bg_purple)
 if has('nvim')
   call edge#highlight('Substitute', s:palette.bg0, s:palette.yellow)
+  highlight! link DiagnosticFloatingError ErrorFloat
+  highlight! link DiagnosticFloatingWarn WarningFloat
+  highlight! link DiagnosticFloatingInfo InfoFloat
+  highlight! link DiagnosticFloatingHint HintFloat
+  highlight! link DiagnosticError ErrorText
+  highlight! link DiagnosticWarn WarningText
+  highlight! link DiagnosticInfo InfoText
+  highlight! link DiagnosticHint HintText
+  highlight! link DiagnosticVirtualTextError VirtualTextError
+  highlight! link DiagnosticVirtualTextWarn VirtualTextWarning
+  highlight! link DiagnosticVirtualTextInfo VirtualTextInfo
+  highlight! link DiagnosticVirtualTextHint VirtualTextHint
+  highlight! link DiagnosticUnderlineError ErrorText
+  highlight! link DiagnosticUnderlineWarn WarningText
+  highlight! link DiagnosticUnderlineInfo InfoText
+  highlight! link DiagnosticUnderlineHint HintText
+  highlight! link DiagnosticSignError RedSign
+  highlight! link DiagnosticSignWarn YellowSign
+  highlight! link DiagnosticSignInfo BlueSign
+  highlight! link DiagnosticSignHint GreenSign
   highlight! link LspDiagnosticsFloatingError ErrorFloat
   highlight! link LspDiagnosticsFloatingWarning WarningFloat
   highlight! link LspDiagnosticsFloatingInformation InfoFloat
@@ -525,6 +545,14 @@ highlight! link CocExplorerHelpDescription Grey
 highlight! link CocExplorerHelpHint Grey
 highlight! link CocRustChainingHint Grey
 " }}}
+" hrsh7th/nvim-cmp {{{
+call edge#highlight('CmpItemAbbrMatch', s:palette.blue, s:palette.none, 'bold')
+call edge#highlight('CmpItemAbbrMatchFuzzy', s:palette.blue, s:palette.none, 'bold')
+highlight! link CmpItemAbbr Fg
+highlight! link CmpItemAbbrDeprecated Fg
+highlight! link CmpItemMenu Fg
+highlight! link CmpItemKind Purple
+" }}}
 " prabirshrestha/vim-lsp {{{
 highlight! link LspErrorVirtual VirtualTextError
 highlight! link LspWarningVirtual VirtualTextWarning
@@ -655,6 +683,7 @@ let g:fzf_colors = {
       \ 'bg+': ['bg', 'CursorLine', 'CursorColumn'],
       \ 'hl+': ['fg', 'Green'],
       \ 'info': ['fg', 'Cyan'],
+      \ 'border':  ['fg', 'Grey'],
       \ 'prompt': ['fg', 'Purple'],
       \ 'pointer': ['fg', 'Blue'],
       \ 'marker': ['fg', 'Blue'],
@@ -1029,6 +1058,27 @@ highlight! link mkdRule Yellow
 highlight! link mkdDelimiter Grey
 highlight! link mkdId Green
 " }}}
+" ft_end }}}
+" ft_begin: vimwiki {{{
+call edge#highlight('VimwikiHeader1', s:palette.purple, s:palette.none, 'bold')
+call edge#highlight('VimwikiHeader2', s:palette.red, s:palette.none, 'bold')
+call edge#highlight('VimwikiHeader3', s:palette.blue, s:palette.none, 'bold')
+call edge#highlight('VimwikiHeader4', s:palette.yellow, s:palette.none, 'bold')
+call edge#highlight('VimwikiHeader5', s:palette.green, s:palette.none, 'bold')
+call edge#highlight('VimwikiHeader6', s:palette.cyan, s:palette.none, 'bold')
+call edge#highlight('VimwikiLink', s:palette.blue, s:palette.none, 'underline')
+call edge#highlight('VimwikiItalic', s:palette.none, s:palette.none, 'italic')
+call edge#highlight('VimwikiBold', s:palette.none, s:palette.none, 'bold')
+call edge#highlight('VimwikiUnderline', s:palette.none, s:palette.none, 'underline')
+highlight! link VimwikiList Red
+highlight! link VimwikiTag Purple
+highlight! link VimwikiCode Green
+highlight! link VimwikiHR Yellow
+highlight! link VimwikiHeaderChar Grey
+highlight! link VimwikiMarkers Grey
+highlight! link VimwikiPre Green
+highlight! link VimwikiPreDelim Green
+highlight! link VimwikiNoExistsLink Red
 " ft_end }}}
 " ft_begin: rst {{{
 " builtin: https://github.com/marshallward/vim-restructupurpletext{{{
